@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' integrity='sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==' crossorigin='anonymous'/>
+    <link rel="stylesheet" href="style.css">
+    <title>CONTATTI - Trapuntificio Arosio</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="#">Trapuntificio Arosio</a>
+            </div>
+            <ul class="links">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="chisiamo.html">CHI SIAMO</a></li>
+                <li><a href="information.html">RICHIEDI INFORMAZIONI</a></li>
+                <li><a href="privacy.html">PRIVACY</a></li>
+                <li><a href="cookie.html">COOKIE POLICY</a></li>
+            </ul>
+            <a href="https://www.instagram.com/trapuntificio_arosio/" class="action_btn">Instagram</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="chisiamo.html">CHI SIAMO</a></li>
+            <li><a href="information.html">RICHIEDI INFORMAZIONI</a></li>
+            <li><a href="privacy.html">PRIVACY</a></li>
+            <li><a href="cookie.html">COOKIE POLICY</a></li>
+            <li><a href="https://www.instagram.com/trapuntificio_arosio/" class="action_btn">Instagram</a></li>
+        </div>
+        <script src="style.js"></script>
+    </header>
+    <main>
+        <div class="row rowcontacts">
+            <div class="col info">
+                <p>Trapuntificio Arosio Di Arosio Elena</p>
+                <p>Via Caprera, 7B</p>
+                <p>20035 Lissone MB</p>
+                <br>
+                <p>Telefono +39 039 462 216</p>
+                <p>trapuntificioarosio@gmail.com</p>
+                <br>
+                <p>P.IVA 09550580964</p>
+            </div>
+            <div class="col col2">
+                <div style="width: 100%">
+                    <iframe class="map" height="600" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Lissone,%20Via%20Caprera,%207B+(Trapuntificio%20Arosio)&amp;t=h&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                        <a href="https://www.maps.ie/population/"></a>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <div class="row rowminimized">
+            <div style="width: 100%">
+                <iframe class="map" height="600" scrolling="no"src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Lissone,%20Via%20Caprera,%207B+(Trapuntificio%20Arosio)&amp;t=h&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                    <a href="https://www.maps.ie/population/"></a>
+                </iframe>
+            </div>
+        </div>
+    </main>
+</body>
+<style>
+    p{
+        line-height: 2vh;
+        animation: showcontent 1s ease-in-out 1 forwards;
+    }
+    body{
+        background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(img/trapuntificiomaps.png);
+    }
+    .info{
+        text-align:right;
+    }
+    .rowcontacts{
+        padding: 3%;
+    }
+    .map{
+        border: 0.7vh solid red;
+        border-radius: 10px;
+        animation: showcontent 1s ease-in-out 1 forwards;
+        width: 100%;
+
+        object-fit:contain;
+    }
+    @keyframes showcontent{
+        from {
+            opacity: 0;
+            transform: translate(0, 100px);
+            filter: blur(33px);
+        }to{
+            opacity: 1;
+            transform: translate(0, 0);
+            filter: blur(0);
+        }
+    }
+    @media(max-width: 1040px){
+        .col2{
+            display: none;
+            flex: 100%;
+        }
+        .rowminimized{
+            display: block;
+        }
+        .info{
+            text-align: center;
+            flex-basis: 100%;
+        }
+        .map{
+            height: 50vh;
+        }
+    }
+</style>
+</html>

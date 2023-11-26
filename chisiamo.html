@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' integrity='sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==' crossorigin='anonymous'/>
+    <link rel="stylesheet" href="style.css">
+    <title>TRAPUNTIFICIO - Trapuntificio Arosio</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="#">Trapuntificio Arosio</a>
+            </div>
+            <ul class="links">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="chisiamo.html">CHI SIAMO</a></li>
+                <li><a href="information.html">RICHIEDI INFORMAZIONI</a></li>
+                <li><a href="privacy.html">PRIVACY</a></li>
+                <li><a href="cookie.html">COOKIE POLICY</a></li>
+            </ul>
+            <a href="https://www.instagram.com/trapuntificio_arosio/" class="action_btn">Instagram</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="chisiamo.html">CHI SIAMO</a></li>
+            <li><a href="information.html">RICHIEDI INFORMAZIONI</a></li>
+            <li><a href="privacy.html">PRIVACY</a></li>
+            <li><a href="cookie.html">COOKIE POLICY</a></li>
+            <li><a href="https://www.instagram.com/trapuntificio_arosio/" class="action_btn">Instagram</a></li>
+        </div>
+    <script src="style.js"></script>
+    </header>
+    <main>
+        <div class="boxdesc">
+            <h1>Trapuntificio</h1>
+            <h2>Confezione di trapunte da oltre 30 anni</h2>
+            <p>Trapuntificio Arosio azienda leader nel settore per la confezione di trapunte, copriletti, piumoni, materassi e guanciali.</p>
+            <p>Da oltre 30 anni, utilizza materiali pregiati quali il piumino d'oca 100%, lana merinos, il sintetico calandrato utilizzato anche nell'abbigliamento e sintetico ignifugo.</p>
+            <p>La lavorazione altamente curata viene effettuata un capo per volta, sinonimo di qualità e cura artigianale, ma sempre nel giusto rapporto qualità prezzo. Rifacimento piumoni recuperando il vostro vecchio piumino d'oca.</p>
+            <p>Un laboratorio dove l'abilità artigianale affianca moderne attrezzature per offrire forniture a privati, contract per alberghi, copriletti sagomati per allestimenti nautici, case di cura e comunità.</p>
+            <p>Alcuni stilisti italiani affidano al Trapuntificio Arosio la realizzazione dei propri capi.</p>
+        </div>
+    </main>
+</body>
+<style>
+    body{
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(img/sfondochisiamo.jpg);
+    }
+    h1{
+        font-size: 6vh;
+    }
+    main{
+        padding-top: 3%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main .boxdesc{
+        width: 60%;
+        padding: 2%;
+        text-align: center;
+        border: 2px solid white;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        margin: 0;
+        animation: showcontent 1s ease-in-out 1 forwards;
+    }
+    .boxdesc:hover{
+        border: 2px solid red;
+    }
+    @keyframes showcontent{
+        from {
+            opacity: 0;
+            transform: translate(0, 100px);
+            filter: blur(33px);
+        }to{
+            opacity: 1;
+            transform: translate(0, 0);
+            filter: blur(0);
+        }
+    }
+    @media(max-width: 560px){
+        main .boxdesc{
+            width: 90%;
+        }
+        
+    }
+</style>
+</html>

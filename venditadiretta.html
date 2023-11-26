@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' integrity='sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==' crossorigin='anonymous'/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lightbox.css">
+    <title>VENDITA DIRETTA - Trapuntificio Arosio</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="#">Trapuntificio Arosio</a>
+            </div>
+            <ul class="links">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="chisiamo.html">CHI SIAMO</a></li>
+                <li><a href="information.html">RICHIEDI INFORMAZIONI</a></li>
+                <li><a href="privacy.html">PRIVACY</a></li>
+                <li><a href="cookie.html">COOKIE POLICY</a></li>
+            </ul>
+            <a href="https://www.instagram.com/trapuntificio_arosio/" class="action_btn">Instagram</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="chisiamo.html">CHI SIAMO</a></li>
+            <li><a href="information.html">RICHIEDI INFORMAZIONI</a></li>
+            <li><a href="privacy.html">PRIVACY</a></li>
+            <li><a href="cookie.html">COOKIE POLICY</a></li>
+            <li><a href="https://www.instagram.com/trapuntificio_arosio/" class="action_btn">Instagram</a></li>
+        </div>
+        <script src="style.js"></script>
+    </header>
+    <main>
+        <div class="text">
+            <h1>Piumini letto</h1>
+            <p>Piumini letto ed arredo per privati. Trapuntificio Arosio, nella provincia di Monza e Brianza, si rivolge ai privati per la fornitura di:</p>
+            <ul>
+                <li>Arredo letto;</li>
+                <li>Piumoni d'oca al 100%;</li>
+                <li>Materassi waterlattex;</li>
+                <li>Guanciali;</li>
+                <li>trapunte e copriletti di diverse dimensioni e fantasie;</li>
+            </ul>
+            <p>Venite a scoprire tutta la qualità dei nostri prodotti.</p>
+            <p>Nel nostro negozio sarete seguiti con esperienza e professionalità, per una scelta personalizzata anche delle stoffe da utilizzare.</p>
+        </div>
+        <div class="box">
+            <div class="gallery">
+                <a href="img/vendita1.jpeg" data-lightbox="models" data-title="Volantino">
+                    <img src="img/vendita1.jpeg" alt="essenze1">
+                </a>
+                <a href="img/vendita2.jpeg" data-lightbox="models" data-title="Essenze">
+                    <img src="img/vendita2.jpeg" alt="essenze2">
+                </a>
+                <a href="img/vendita3.jpeg" data-lightbox="models" data-title="Esempio Essenza">
+                    <img src="img/vendita3.jpeg" alt="essenze3">
+                </a>
+                <a href="img/vendita4.jpg" data-lightbox="models" data-title="Prodotti">
+                    <img src="img/vendita4.jpg" alt="essenze4">
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+<style>
+    ul{
+        color: white;
+    }
+    li:hover{
+        color: red;
+    }
+    p{
+        line-height: 10px;
+    }
+    .box{
+        width: 100%;
+        min-height: 10vh;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2%;
+    }
+    .gallery{
+        animation: showcontent 1s ease-in-out 0.3s 1 forwards;
+    }
+    .gallery img{
+        width: 40vh;
+    }
+    img{
+        border-radius: 10px;
+        box-shadow: 0 10px 20px #a1a1a1;
+        height: 35vh;
+        margin: 1vh;
+    }
+    img:hover{
+        border: 3px solid red;
+        border-radius: 10px;
+    }
+    .text{
+        animation: showcontent 1s ease-in-out 1 forwards;
+    }
+    span{
+        background-color: transparent;
+        height: 100%;
+        width: 0;
+        border-radius: 25px;
+        position: relative;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: 0.5s;
+    }
+    @keyframes showcontent{
+        from {
+            opacity: 0;
+            transform: translate(0, 100px);
+            filter: blur(33px);
+        }to{
+            opacity: 1;
+            transform: translate(0, 0);
+            filter: blur(0);
+        }
+    }
+    @media(max-width: 1080px){
+        p{
+            line-height: 3vh;
+        }
+    }
+    @media(max-width: 560px){
+        p{
+            text-align: center;
+        }
+        h1{
+            font-size: 5vh;
+        }
+    }
+</style>
+<script src="lightbox-plus-jquery.js"></script>
+</html>

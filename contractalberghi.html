@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' integrity='sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==' crossorigin='anonymous'/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lightbox.css">
+    <title>CONTRACT ALBERGHI - Trapuntificio Arosio</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="#">Trapuntificio Arosio</a>
+            </div>
+            <ul class="links">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="chisiamo.html">CHI SIAMO</a></li>
+                <li><a href="information.html">RICHIEDI INFORMAZIONI</a></li>
+                <li><a href="privacy.html">PRIVACY</a></li>
+                <li><a href="cookie.html">COOKIE POLICY</a></li>
+            </ul>
+            <a href="https://www.instagram.com/trapuntificio_arosio/" class="action_btn">Instagram</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="chisiamo.html">CHI SIAMO</a></li>
+            <li><a href="information.html">RICHIEDI INFORMAZIONI</a></li>
+            <li><a href="privacy.html">PRIVACY</a></li>
+            <li><a href="cookie.html">COOKIE POLICY</a></li>
+            <li><a href="https://www.instagram.com/trapuntificio_arosio/" class="action_btn">Instagram</a></li>
+        </div>
+        <script src="style.js"></script>
+    </header>
+    <main>
+        <div class="text">
+            <h1>Arredamento camere hotel</h1>
+            <p>Arredamento camere hotel: Trapuntificio Arosio, a Lissone, offre forniture contract per hotel, 
+                alberghi, comunità, case di cura e altre strutture alberghiere.</p>
+            <p>Vengono realizzati arredi completi che rispecchiano lo stile del cliente. Il tutto prodotto su 
+                misura con materiali di qualità ed attrazzature all'avanguardia.</p>
+            <p>Articoli confezionati e materiali ignifughi, linee studiate per rispondere alle esigenze delle 
+                strutture alberghiere e curati nei minimi particolari.</p> 
+            <p>L'intensità della profumazione varia a seconda della quantità di prodotto versata.</p>
+            <p style="font-weight: bold;">Guarda la sezione <a href="arredoletto.html">arredo letto</a></p>
+        </div>
+        <div class="box">
+            <div class="gallery">
+                <a href="img/alberghi1.jpeg" data-lightbox="models" data-title="Volantino">
+                    <img src="img/alberghi1.jpeg" alt="alberghi1">
+                </a>
+                <a href="img/alberghi2.jpeg" data-lightbox="models" data-title="Essenze">
+                    <img src="img/alberghi2.jpeg" alt="alberghi2">
+                </a>
+                <a href="img/alberghi3.jpeg" data-lightbox="models" data-title="Esempio Essenza">
+                    <img src="img/alberghi3.jpeg" alt="alberghi3">
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+<style>
+
+    p{
+        line-height: 1.5vh;
+    }
+    .text{
+        animation: showcontent 1s ease-in-out 1 forwards;
+    }
+    .box{
+        width: 100%;
+        min-height: 10vh;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2%;
+    }
+    .gallery{
+        animation: showcontent 1s ease-in-out 0.3s 1 forwards;
+    }
+    .gallery img{
+        width: 40vh;
+    }
+    img{
+        border-radius: 10px;
+        box-shadow: 0 10px 20px #a1a1a1;
+        height: 35vh;
+        margin: 1vh;
+    }
+    img:hover{
+        border: 3px solid red;
+        border-radius: 10px;
+    }
+    span{
+        background-color: transparent;
+        height: 100%;
+        width: 0;
+        border-radius: 25px;
+        position: relative;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: 0.5s;
+    }
+    @keyframes showcontent{
+        from {
+            opacity: 0;
+            transform: translate(0, 100px);
+            filter: blur(33px);
+        }to{
+            opacity: 1;
+            transform: translate(0, 0);
+            filter: blur(0);
+        }
+    }
+    @media(max-width: 1210px){
+        p{
+            line-height: 3vh;
+        }
+    }
+    @media(max-width: 560px){
+        p{
+            text-align: center;
+        }
+        h1{
+            font-size: 5vh;
+        }
+    }
+</style>
+<script src="lightbox-plus-jquery.js"></script>
+</html>

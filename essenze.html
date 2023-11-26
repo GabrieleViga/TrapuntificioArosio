@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' integrity='sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==' crossorigin='anonymous'/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lightbox.css">
+    <title>ESSENZE BUCATO - Trapuntificio Arosio</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="#">Trapuntificio Arosio</a>
+            </div>
+            <ul class="links">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="chisiamo.html">CHI SIAMO</a></li>
+                <li><a href="information.html">RICHIEDI INFORMAZIONI</a></li>
+                <li><a href="privacy.html">PRIVACY</a></li>
+                <li><a href="cookie.html">COOKIE POLICY</a></li>
+            </ul>
+            <a href="https://www.instagram.com/trapuntificio_arosio/" class="action_btn">Instagram</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="chisiamo.html">CHI SIAMO</a></li>
+            <li><a href="information.html">RICHIEDI INFORMAZIONI</a></li>
+            <li><a href="privacy.html">PRIVACY</a></li>
+            <li><a href="cookie.html">COOKIE POLICY</a></li>
+            <li><a href="https://www.instagram.com/trapuntificio_arosio/" class="action_btn">Instagram</a></li>
+        </div>
+        <script src="style.js"></script>
+    </header>
+    <main>
+        <div class="text">
+            <h1>Essenze per il bucato</h1>
+            <p>Profumo concentrato per il bucato. I profumi si legano ai tessuti donando freschezza con un semplice tocco di stile.</p>
+            <p>Essenze persistenti per giorni e giorni sul bucato anche utilizzando l'asciugatrice.</p>
+            <p>Riducono il formarsi dei cattivi odori sul nostro bucato, soprattutto quelli di umido, non macchiano e non lasciano aloni.</p> 
+            <p>L'intensità della profumazione varia a seconda della quantità di prodotto versata.</p>
+            <p style="font-weight: bold;">Disponibile nei formati:</p>
+            <ul>
+                <li>Flacone 100ml;</li>
+                <li>Flacone 400ml;</li>
+            </ul>
+        </div>
+        <div class="box">
+            <div class="gallery">
+                <a href="img/essenze1.jpg" data-lightbox="models" data-title="Volantino">
+                    <img src="img/essenze1.jpg" alt="essenze1">
+                </a>
+                <a href="img/essenze2.jpg" data-lightbox="models" data-title="Essenze">
+                    <img src="img/essenze2.jpg" alt="essenze2">
+                </a>
+                <a href="img/essenze3.jpg" data-lightbox="models" data-title="Esempio Essenza">
+                    <img src="img/essenze3.jpg" alt="essenze3">
+                </a>
+                <a href="img/essenze4.jpg" data-lightbox="models" data-title="Prodotti">
+                    <img src="img/essenze4.jpg" alt="essenze4">
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+<style>
+    ul{
+        color: white;
+    }
+    li:hover{
+        color: red;
+    }
+    p{
+        line-height: 1.3vh;
+    }
+    .box{
+        width: 100%;
+        min-height: 10vh;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2%;
+    }
+    .gallery{
+        animation: showcontent 1s ease-in-out 0.3s 1 forwards;
+    }
+    .gallery img{
+        width: 40vh;
+    }
+    img{
+        border-radius: 10px;
+        box-shadow: 0 10px 20px #a1a1a1;
+        height: 35vh;
+        margin: 1vh;
+    }
+    img:hover{
+        border: 3px solid red;
+        border-radius: 10px;
+    }
+    .text{
+        animation: showcontent 1s ease-in-out 1 forwards;
+    }
+    span{
+        background-color: transparent;
+        height: 100%;
+        width: 0;
+        border-radius: 25px;
+        position: relative;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: 0.5s;
+    }
+    @keyframes showcontent{
+        from {
+            opacity: 0;
+            transform: translate(0, 100px);
+            filter: blur(33px);
+        }to{
+            opacity: 1;
+            transform: translate(0, 0);
+            filter: blur(0);
+        }
+    }
+    @media(max-width: 1010px){
+        p{
+            line-height: 3vh;
+        }
+    }
+    @media(max-width: 560px){
+        p{
+            text-align: center;
+        }
+        h1{
+            font-size: 5vh;
+        }
+    }
+</style>
+<script src="lightbox-plus-jquery.js"></script>
+</html>

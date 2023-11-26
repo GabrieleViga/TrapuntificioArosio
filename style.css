@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body{
+    margin: 0;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(img/sfondoHome.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+a:hover{
+    color: red;
+}
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+.navbar .toggle_btn{
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+.action_btn{
+    background-color: red;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+.action_btn:hover{
+    scale: 1.05;
+    color: white;
+}
+.action_btn:active{
+    scale: 0.95;
+}
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 100%;
+    height: 0;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open{
+    height: unset;
+    z-index: 22222;
+}
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.row{
+    padding-top: 2%;
+    display: flex;
+    height: 70%;
+    align-items: center;
+}
+.col{
+    flex-basis: 50%;
+    padding: 1%;
+}
+h1{
+    color: white;
+    font-size: 7vh;
+}
+h2{
+    color: white;
+}
+p{
+    color: white;
+}
+h1:hover{
+    color: red;
+}
+.secondhead{
+    font-weight: bold;    
+}
+.quality{
+    font-size: 20px;
+    font-style: oblique; 
+}
+.cit{
+    font-style: oblique;
+}
+button{
+    width: 30vh;
+    padding: 1.5vh 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid red;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: red;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
+
+.card{
+    width: 40%;
+    height: 35vh;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 2vh 2vh;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 2vh 2vh;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+    overflow: hidden;
+}
+.card1{
+    background-image: url(img/arredoletto.jpg);
+}
+.card2{
+    background-image: url(img/essenze.jpg);
+}
+.card3{
+    background-image: url(img/contractalberghi.jpeg);
+}
+.card4{
+    background-image: url(img/venditadiretta.jpeg);
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+h5{
+    color: white;
+    font-size: 20px;
+    text-shadow: 0 0 5px #999;
+    margin-bottom: 10%;
+}
+.card p{
+    text-shadow: 0 0 15px #000;
+    font-size: 1.6vh;
+    margin: 0;
+}
+.rowminimized{
+    display: none;
+}
+.fade1{
+    animation: showcontent 1s ease-in-out 1 forwards;
+}
+.fade2{
+    animation: showcontent 1s ease-in-out 0.3s 1 forwards;
+}
+.fade3{
+    animation: showcontent 1s ease-in-out 0.6s 1 forwards;
+}
+
+@keyframes showcontent{
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }to{
+        opacity: 1;
+        transform: translate(0, 0);
+        filter: blur(0);
+    }
+}
+
+@media(max-width: 1160px){
+    .navbar .links,
+    .navbar .action_btn{
+        display: none;
+    }
+    .navbar .toggle_btn{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+}
+@media(max-width: 860px){
+    .col2{
+        display: none;
+        flex: 100%;
+    }
+    .rowminimized{
+        display: block;
+    }
+    .card{
+        height: 25vh;
+    }
+}
+@media(max-width: 560px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+    h1, p, h5{
+        text-align: center;
+    }
+    .dropdown_menu.open{
+        height: unset;
+    }
+    .row{
+        justify-content: center;
+    }
+    .col1{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .col2{
+        flex: 100%;
+    }
+    .card{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 2vh;
+    }
+}

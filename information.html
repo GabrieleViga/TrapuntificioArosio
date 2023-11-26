@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' integrity='sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==' crossorigin='anonymous'/>
+    <link rel="stylesheet" href="style.css">
+    <title>INFORMAZIONI - Trapuntificio Arosio</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="#">Trapuntificio Arosio</a>
+            </div>
+            <ul class="links">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="chisiamo.html">CHI SIAMO</a></li>
+                <li><a href="information.html">RICHIEDI INFORMAZIONI</a></li>
+                <li><a href="privacy.html">PRIVACY</a></li>
+                <li><a href="cookie.html">COOKIE POLICY</a></li>
+            </ul>
+            <a href="https://www.instagram.com/trapuntificio_arosio/" class="action_btn">Instagram</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="chisiamo.html">CHI SIAMO</a></li>
+            <li><a href="information.html">RICHIEDI INFORMAZIONI</a></li>
+            <li><a href="privacy.html">PRIVACY</a></li>
+            <li><a href="cookie.html">COOKIE POLICY</a></li>
+            <li><a href="https://www.instagram.com/trapuntificio_arosio/" class="action_btn">Instagram</a></li>
+        </div>
+        <script src="style.js"></script>
+    </header>
+    <main>
+        <div class="row">
+            <div class="col">
+                <h1>Trapuntificio Arosio</h1>
+                <p>Compila il modulo informativo, saremo felici di fornirti tutte le informazioni sui nostri prodotti.</p>
+                <p>Richiedi informazioni sui nostri prodotti realizzati presso il nostro centro Trapuntificio Arosio di Lissone.</p>
+            </div>
+            <div class="col col2">
+                <form>
+                    <label for="nominativo">NOMINATIVO</label>
+                    <input type="text" placeholder="NOMINATIVO" id="nominativo" required>
+                    <label for="societa">SOCIETÀ</label>
+                    <input type="text" placeholder="SOCIETÀ" id="societa" required>
+                    <label for="telefono">TELEFONO</label>
+                    <input type="text" placeholder="TELEFONO" id="telefono" required>
+                    <label for="email">EMAIL</label>
+                    <input type="text" placeholder="EMAIL" id="email" required>
+                    <label for="oggetto">OGGETTO</label>
+                    <input class="ogg" type="text" placeholder="OGGETTO" id="oggetto" required>
+                    <label for="descrizione">DESCRIZIONE</label>
+                    <input class="desc" type="text" placeholder="DESCRIZIONE" id="descrizione" required>
+                    <input type="checkbox" id="autorizzo" required>
+                    <label style="font-size: 1.7vh;" for="autorizzo">Autorizzo il trattamento dei miei dati personali ai sensi del Nuovo Regolamento UE 679/2016.</label>
+                    <button type="button" onclick="invioRichiesta()"><span></span>Invio richiesta</button>
+                </form>
+            </div>
+        </div>
+        <div class="row rowminimized">
+            <form>
+                <label for="nominativo">NOMINATIVO</label>
+                <input type="text" placeholder="NOMINATIVO" id="nominativo" required>
+                <label for="societa">SOCIETÀ</label>
+                <input type="text" placeholder="SOCIETÀ" id="societa" required>
+                <label for="telefono">TELEFONO</label>
+                <input type="text" placeholder="TELEFONO" id="telefono" required>
+                <label for="email">EMAIL</label>
+                <input type="text" placeholder="EMAIL" id="email" required>
+                <label for="oggetto">OGGETTO</label>
+                <input class="ogg" type="text" placeholder="OGGETTO" id="oggetto" required>
+                <label for="descrizione">DESCRIZIONE</label>
+                <input class="desc" type="text" placeholder="DESCRIZIONE" id="descrizione" required>
+                <input type="checkbox" id="autorizzo" required>
+                <label style="font-size: 1.7vh;" for="autorizzo">Autorizzo il trattamento dei miei dati personali ai sensi del Nuovo Regolamento UE 679/2016.</label>
+                <button type="button" onclick="invioRichiesta()"><span></span>Invio richiesta</button>
+            </form>
+        </div>
+    </main>
+</body>
+<style>
+    body{
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(img/sfondoinfo.jpg);
+    }
+    label{
+        color: white;
+        font-weight: bold;
+    }
+    input{
+        border-radius: 5px;
+        padding: 1%;
+        font-size: 1.5vh;
+    }
+    input[type=text] {
+        border: 2px solid #ccc;
+    }
+    input[type=text]:focus {
+        border: 3px solid red;
+    }
+    .desc{
+        padding-left: 1%;
+        padding-top: 1%;
+        padding-bottom: 10vh;
+    }
+    .ogg{
+        padding-left: 1%;
+        padding-top: 1%;
+        padding-bottom: 5vh;
+    }
+    h1{
+        animation: showcontent 1s ease-in-out 1 forwards;
+    }
+    p{
+        animation: showcontent 1s ease-in-out 0.3s 1 forwards;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        animation: showcontent 1s ease-in-out 1 forwards;
+    }
+    @keyframes showcontent{
+        from {
+            opacity: 0;
+            transform: translate(0, 100px);
+            filter: blur(33px);
+        }to{
+            opacity: 1;
+            transform: translate(0, 0);
+            filter: blur(0);
+        }
+    }
+</style>
+</html>
